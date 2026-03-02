@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Senior Frontend Engineer — Angular, React, Ionic. Arquitectura frontend, performance y código limpio. Portfolio de Pedro.">
+    <meta name="keywords" content="frontend engineer, angular, react, ionic, senior developer, portfolio, open source">
+    <meta name="author" content="Pedro">
+    <meta name="theme-color" content="#0a0a0f">
+    <meta name="color-scheme" content="dark">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Pedro — Senior Frontend Engineer">
+    <meta property="og:description"
+        content="Arquitectura frontend, performance y código limpio. Angular · React · Ionic.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pedro — Senior Frontend Engineer">
+    <meta name="twitter:description" content="Arquitectura frontend, performance y código limpio.">
+
+    <title>Pedro — Senior Frontend Engineer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌨</text></svg>">
+</head>
+
+<body>
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- NAVIGATION                                  -->
+    <!-- ═══════════════════════════════════════════ -->
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+        <div class="nav__container">
+            <a href="#" class="nav__logo" aria-label="Inicio">
+                <span class="nav__logo-bracket">{</span>
+                <span class="nav__logo-text">P</span>
+                <span class="nav__logo-bracket">}</span>
+            </a>
+
+            <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+                <span class="nav__toggle-line"></span>
+            </button>
+
+            <ul class="nav__menu" id="navMenu" role="menubar">
+                <li role="none"><a href="#about" class="nav__link" role="menuitem"><span
+                            class="nav__link-index">01.</span> sobre_mí</a></li>
+                <li role="none"><a href="#stack" class="nav__link" role="menuitem"><span
+                            class="nav__link-index">02.</span> stack</a></li>
+                <li role="none"><a href="#projects" class="nav__link" role="menuitem"><span
+                            class="nav__link-index">03.</span> proyectos</a></li>
+                <li role="none"><a href="#opensource" class="nav__link" role="menuitem"><span
+                            class="nav__link-index">04.</span> open_source</a></li>
+                <li role="none"><a href="#philosophy" class="nav__link" role="menuitem"><span
+                            class="nav__link-index">05.</span> filosofía</a></li>
+                <li role="none"><a href="#contact" class="nav__link nav__link--cta" role="menuitem"><span
+                            class="nav__link-index">06.</span> contacto</a></li>
+            </ul>
+
+            <div class="nav__sound-toggle">
+                <button id="soundToggle" class="sound-btn" aria-label="Activar sonido de teclado"
+                    title="Sonido de teclado mecánico">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path class="sound-off" d="M11 5L6 9H2v6h4l5 4V5z M23 9l-6 6 M17 9l6 6" />
+                        <path class="sound-on"
+                            d="M11 5L6 9H2v6h4l5 4V5z M15.54 8.46a5 5 0 0 1 0 7.07 M19.07 4.93a10 10 0 0 1 0 14.14"
+                            style="display:none" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- HERO SECTION                                -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section class="hero" id="hero" aria-label="Presentación">
+            <div class="hero__bg-grid" aria-hidden="true"></div>
+            <div class="hero__scanline" aria-hidden="true"></div>
+
+            <div class="hero__container">
+                <div class="hero__content">
+                    <div class="hero__terminal-bar" aria-hidden="true">
+                        <span class="hero__terminal-dot hero__terminal-dot--red"></span>
+                        <span class="hero__terminal-dot hero__terminal-dot--yellow"></span>
+                        <span class="hero__terminal-dot hero__terminal-dot--green"></span>
+                        <span class="hero__terminal-tab">pedro@portfolio ~ </span>
+                    </div>
+
+                    <p class="hero__prefix reveal" aria-hidden="true">
+                        <span class="hero__comment">// Building interfaces that matter</span>
+                    </p>
+
+                    <h1 class="hero__title reveal">
+                        <span class="hero__title-line">Senior</span>
+                        <span class="hero__title-line hero__title-line--accent">Frontend</span>
+                        <span class="hero__title-line">Engineer<span class="hero__cursor"
+                                aria-hidden="true">_</span></span>
+                    </h1>
+
+                    <p class="hero__subtitle reveal">
+                        Arquitectura frontend robusta, interfaces que escalan y código que otros
+                        <em>disfrutan</em> mantener. <br>
+                        <strong>Angular</strong> · <strong>React</strong> · <strong>Ionic</strong>
+                    </p>
+
+                    <div class="hero__actions reveal">
+                        <a href="#projects" class="btn btn--primary">
+                            <span class="btn__text">ver proyectos</span>
+                            <span class="btn__icon" aria-hidden="true">→</span>
+                        </a>
+                        <a href="#contact" class="btn btn--ghost">
+                            <span class="btn__text">hablemos</span>
+                        </a>
+                    </div>
+
+                    <div class="hero__meta reveal" aria-label="Métricas clave">
+                        <div class="hero__stat">
+                            <span class="hero__stat-value">8+</span>
+                            <span class="hero__stat-label">años de experiencia</span>
+                        </div>
+                        <div class="hero__stat-divider" aria-hidden="true"></div>
+                        <div class="hero__stat">
+                            <span class="hero__stat-value">50+</span>
+                            <span class="hero__stat-label">proyectos entregados</span>
+                        </div>
+                        <div class="hero__stat-divider" aria-hidden="true"></div>
+                        <div class="hero__stat">
+                            <span class="hero__stat-value">OSS</span>
+                            <span class="hero__stat-label">contribuidor activo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero__visual reveal" aria-hidden="true">
+                    <div class="hero__code-block">
+                        <div class="hero__code-header">
+                            <span class="hero__code-file">engineer.ts</span>
+                            <div class="hero__code-actions">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                        <pre class="hero__code"><code><span class="code-keyword">interface</span> <span class="code-type">Engineer</span> {
+  <span class="code-prop">name</span>: <span class="code-string">'Pedro'</span>;
+  <span class="code-prop">role</span>: <span class="code-string">'Senior Frontend'</span>;
+  <span class="code-prop">passion</span>: <span class="code-string">'∞'</span>;
+  <span class="code-prop">stack</span>: [
+    <span class="code-string">'Angular'</span>,
+    <span class="code-string">'React'</span>,
+    <span class="code-string">'Ionic'</span>
+  ];
+  <span class="code-prop">focus</span>: [
+    <span class="code-string">'Architecture'</span>,
+    <span class="code-string">'Performance'</span>,
+    <span class="code-string">'DX'</span>
+  ];
+}
+
+<span class="code-keyword">const</span> <span class="code-var">build</span> = <span class="code-keyword">async</span> () <span class="code-keyword">=></span> {
+  <span class="code-keyword">return</span> <span class="code-string">'excellence'</span>;
+};</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero__scroll-indicator reveal" aria-hidden="true">
+                <span>scroll</span>
+                <div class="hero__scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- ABOUT SECTION                               -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section class="section about" id="about" aria-labelledby="about-title">
+            <div class="section__container">
+                <header class="section__header reveal">
+                    <span class="section__index" aria-hidden="true">01</span>
+                    <h2 class="section__title" id="about-title">sobre_mí<span class="section__title-dot">.</span></h2>
+                    <div class="section__line" aria-hidden="true"></div>
+                </header>
+
+                <div class="about__grid">
+                    <div class="about__content reveal">
+                        <p class="about__lead">
+                            No soy un desarrollador que escribe código. Soy un <strong>ingeniero que diseña
+                                soluciones</strong> y las traduce en interfaces que funcionan, escalan y se mantienen.
+                        </p>
+                        <p>
+                            Llevo más de 8 años construyendo productos digitales en equipos de alto rendimiento. He
+                            trabajado desde startups que necesitaban velocidad extrema hasta empresas que exigían
+                            arquitecturas enterprise con estándares rigurosos. En ambos escenarios, mi objetivo es el
+                            mismo: <strong>entregar software que genere impacto real</strong>.
+                        </p>
+                        <p>
+                            Mi curiosidad tecnológica no tiene interruptor de apagado. Exploro constantemente desde
+                            nuevos paradigmas de estado hasta optimizaciones de rendering, pasando por hardware — sí,
+                            tengo opiniones fuertes sobre switches de teclados mecánicos. Esa misma curiosidad me ha
+                            llevado a contribuir a proyectos open source, porque creo que el conocimiento que no se
+                            comparte es conocimiento que se pierde.
+                        </p>
+                        <p>
+                            Creo en la <strong>simplificación agresiva</strong>: el mejor código no es el más
+                            inteligente, es el que cualquier persona del equipo puede entender, extender y confiar. La
+                            complejidad accidental es el enemigo. La claridad es la feature más importante.
+                        </p>
+                    </div>
+
+                    <aside class="about__sidebar reveal">
+                        <div class="about__principles">
+                            <h3 class="about__sidebar-title">
+                                <span class="code-comment">// Principios</span>
+                            </h3>
+                            <ul class="about__principle-list">
+                                <li class="about__principle">
+                                    <span class="about__principle-icon" aria-hidden="true">▹</span>
+                                    Arquitectura antes que código
+                                </li>
+                                <li class="about__principle">
+                                    <span class="about__principle-icon" aria-hidden="true">▹</span>
+                                    Performance no es afterthought
+                                </li>
+                                <li class="about__principle">
+                                    <span class="about__principle-icon" aria-hidden="true">▹</span>
+                                    Tests como documentación viva
+                                </li>
+                                <li class="about__principle">
+                                    <span class="about__principle-icon" aria-hidden="true">▹</span>
+                                    DX = velocidad del equipo
+                                </li>
+                                <li class="about__principle">
+                                    <span class="about__principle-icon" aria-hidden="true">▹</span>
+                                    Simplificar antes de escalar
+                                </li>
+                                <li class="about__principle">
+                                    <span class="about__principle-icon" aria-hidden="true">▹</span>
+                                    Code reviews como mentoría
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="about__keycap" aria-hidden="true" title="Keyboard enthusiast">
+                            <div class="keycap">
+                                <span class="keycap__label">ESC</span>
+                                <span class="keycap__sub">from mediocrity</span>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- STACK SECTION                               -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section class="section stack" id="stack" aria-labelledby="stack-title">
+            <div class="section__container">
+                <header class="section__header reveal">
+                    <span class="section__index" aria-hidden="true">02</span>
+                    <h2 class="section__title" id="stack-title">stack<span class="section__title-dot">.</span></h2>
+                    <div class="section__line" aria-hidden="true"></div>
+                </header>
+
+                <p class="stack__intro reveal">
+                    No colecciono logos de tecnologías. Cada herramienta aquí representa <strong>experiencia real en
+                        producción</strong>, decisiones de arquitectura fundamentadas y horas de profundización técnica.
+                </p>
+
+                <div class="stack__grid">
+                    <!-- Core Frameworks -->
+                    <article class="stack__card stack__card--featured reveal" aria-label="Angular">
+                        <div class="stack__card-header">
+                            <div class="stack__card-icon">
+                                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                                    <path
+                                        d="M9.931 12.645h4.138l-2.07-4.908m0-7.737L.68 3.982l1.726 14.771L12 24l9.596-5.242L23.32 3.984 11.999.001zm7.064 18.31h-2.638l-1.422-3.503H8.996l-1.422 3.504h-2.64L12 2.65z" />
+                                </svg>
+                            </div>
+                            <span class="stack__card-level">Expert</span>
+                        </div>
+                        <h3 class="stack__card-title">Angular</h3>
+                        <p class="stack__card-desc">Arquitecturas enterprise, signals, standalone components, RxJS
+                            avanzado, lazy loading estratégico, state management con NgRx/signals.</p>
+                        <div class="stack__card-tags">
+                            <span class="tag">RxJS</span>
+                            <span class="tag">NgRx</span>
+                            <span class="tag">Signals</span>
+                            <span class="tag">SSR</span>
+                        </div>
+                    </article>
+
+                    <article class="stack__card stack__card--featured reveal" aria-label="React">
+                        <div class="stack__card-header">
+                            <div class="stack__card-icon">
+                                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                                    <path
+                                        d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.31 0-.6.045-.87.128C3.22 2.39 2.452 5.71 3.35 9.708c-3.03.786-5.349 2.126-5.349 3.796 0 1.676 2.339 3.024 5.384 3.807-.895 3.978-.14 7.283 2.874 8.218.27.084.56.127.87.127 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.31 0 .6-.044.87-.127 3.014-.935 3.77-4.24 2.874-8.218 3.045-.784 5.384-2.131 5.384-3.807 0-1.67-2.32-3.01-5.349-3.796.9-3.998.15-7.318-2.862-8.253a2.813 2.813 0 0 0-.87-.128zM12 15.004a3.003 3.003 0 1 1 0-6.005 3.003 3.003 0 0 1 0 6.005z" />
+                                </svg>
+                            </div>
+                            <span class="stack__card-level">Expert</span>
+                        </div>
+                        <h3 class="stack__card-title">React</h3>
+                        <p class="stack__card-desc">Hooks patterns avanzados, server components, suspense boundaries,
+                            custom renderers, optimización de re-renders, micro-frontends.</p>
+                        <div class="stack__card-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Zustand</span>
+                            <span class="tag">RSC</span>
+                            <span class="tag">Vite</span>
+                        </div>
+                    </article>
+
+                    <article class="stack__card stack__card--featured reveal" aria-label="Ionic">
+                        <div class="stack__card-header">
+                            <div class="stack__card-icon">
+                                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                                    <path
+                                        d="M22.922 7.027l-.103-.23-.169.188c-.408.464-.928.82-1.505 1.03l-.159.057.074.149a9.758 9.758 0 0 1 .88 4.108c-.006 5.354-4.353 9.695-9.706 9.695a9.693 9.693 0 0 1-9.695-9.707C2.545 6.964 6.887 2.623 12.24 2.617a9.691 9.691 0 0 1 4.296.987l.15.073.056-.16a3.846 3.846 0 0 1 1.007-1.509l.187-.171-.228-.102A11.904 11.904 0 0 0 12.239.42C5.924.42.814 5.523.808 11.838c-.006 6.318 5.09 11.44 11.404 11.446h.028c6.314-.006 11.414-5.12 11.42-11.434a11.9 11.9 0 0 0-.738-4.823zm-3.603.478a2.185 2.185 0 0 0 2.19-2.183 2.185 2.185 0 0 0-2.19-2.19 2.183 2.183 0 0 0-2.183 2.19 2.185 2.185 0 0 0 2.183 2.183zM12.24 6.854c-2.756 0-4.992 2.236-4.992 4.992s2.236 4.998 4.992 4.998 4.992-2.242 4.992-4.998-2.236-4.992-4.992-4.992z" />
+                                </svg>
+                            </div>
+                            <span class="stack__card-level">Expert</span>
+                        </div>
+                        <h3 class="stack__card-title">Ionic</h3>
+                        <p class="stack__card-desc">Apps híbridas de alto rendimiento, Capacitor plugins nativos,
+                            offline-first patterns, optimización de bundle size, PWAs avanzadas.</p>
+                        <div class="stack__card-tags">
+                            <span class="tag">Capacitor</span>
+                            <span class="tag">PWA</span>
+                            <span class="tag">Offline</span>
+                            <span class="tag">Native</span>
+                        </div>
+                    </article>
+
+                    <!-- Supporting Skills -->
+                    <article class="stack__card reveal" aria-label="Testing">
+                        <div class="stack__card-header">
+                            <span class="stack__card-emoji" aria-hidden="true">🧪</span>
+                            <span class="stack__card-level">Advanced</span>
+                        </div>
+                        <h3 class="stack__card-title">Testing</h3>
+                        <p class="stack__card-desc">Jest, Cypress, Playwright, Testing Library. TDD cuando suma valor.
+                            Tests que documentan comportamiento, no implementación.</p>
+                    </article>
+
+                    <article class="stack__card reveal" aria-label="Architecture">
+                        <div class="stack__card-header">
+                            <span class="stack__card-emoji" aria-hidden="true">🏗️</span>
+                            <span class="stack__card-level">Advanced</span>
+                        </div>
+                        <h3 class="stack__card-title">Arquitectura</h3>
+                        <p class="stack__card-desc">Micro-frontends, module federation, monorepos con Nx, clean
+                            architecture, domain-driven design en frontend, dependency injection patterns.</p>
+                    </article>
+
+                    <article class="stack__card reveal" aria-label="Performance">
+                        <div class="stack__card-header">
+                            <span class="stack__card-emoji" aria-hidden="true">⚡</span>
+                            <span class="stack__card-level">Advanced</span>
+                        </div>
+                        <h3 class="stack__card-title">Performance</h3>
+                        <p class="stack__card-desc">Core Web Vitals, bundle optimization, tree shaking, code splitting,
+                            rendering strategies, profiling con DevTools, Lighthouse CI.</p>
+                    </article>
+
+                    <article class="stack__card reveal" aria-label="Dev Experience">
+                        <div class="stack__card-header">
+                            <span class="stack__card-emoji" aria-hidden="true">🛠️</span>
+                            <span class="stack__card-level">Advanced</span>
+                        </div>
+                        <h3 class="stack__card-title">Dev Experience</h3>
+                        <p class="stack__card-desc">CI/CD pipelines, ESLint custom rules, Prettier, Husky, conventional
+                            commits, mono-repo tooling, Storybook, documentación técnica.</p>
+                    </article>
+
+                    <article class="stack__card reveal" aria-label="UI/UX Engineering">
+                        <div class="stack__card-header">
+                            <span class="stack__card-emoji" aria-hidden="true">🎨</span>
+                            <span class="stack__card-level">Advanced</span>
+                        </div>
+                        <h3 class="stack__card-title">UI/UX Engineering</h3>
+                        <p class="stack__card-desc">Design systems, CSS architecture (BEM/utility), animaciones
+                            performantes, accesibilidad WCAG, responsive design avanzado, Figma-to-code.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- PROJECTS SECTION                            -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section class="section projects" id="projects" aria-labelledby="projects-title">
+            <div class="section__container">
+                <header class="section__header reveal">
+                    <span class="section__index" aria-hidden="true">03</span>
+                    <h2 class="section__title" id="projects-title">proyectos<span class="section__title-dot">.</span>
+                    </h2>
+                    <div class="section__line" aria-hidden="true"></div>
+                </header>
+
+                <div class="projects__list">
+                    <!-- Project 1 -->
+                    <article class="project reveal" aria-label="Enterprise Dashboard Platform">
+                        <div class="project__header">
+                            <div class="project__number" aria-hidden="true">01</div>
+                            <div class="project__meta">
+                                <h3 class="project__title">Enterprise Dashboard Platform</h3>
+                                <span class="project__role">Lead Frontend Engineer</span>
+                            </div>
+                        </div>
+
+                        <div class="project__body">
+                            <div class="project__detail">
+                                <h4 class="project__detail-label">Problema</h4>
+                                <p>Plataforma legacy con 200+ vistas acopladas, tiempos de build de 15 minutos y zero
+                                    test coverage. El equipo no podía iterar sin romper funcionalidades existentes.</p>
+                            </div>
+
+                            <div class="project__detail">
+                                <h4 class="project__detail-label">Solución</h4>
+                                <p>Migración incremental a Angular con arquitectura de micro-frontends usando Module
+                                    Federation. Design system propio con Storybook. Pipeline de CI/CD con quality gates
+                                    automatizados.</p>
+                            </div>
+
+                            <div class="project__detail">
+                                <h4 class="project__detail-label">Decisiones técnicas</h4>
+                                <p>Nx monorepo para gestionar 12 aplicaciones independientes. Estrategia de estado con
+                                    NgRx ComponentStore por dominio. Lazy loading agresivo que redujo el bundle inicial
+                                    un 73%.</p>
+                            </div>
+
+                            <div class="project__detail">
+                                <h4 class="project__detail-label">Impacto</h4>
+                                <p>Build time reducido de 15min a 2min. Test coverage de 0% a 82%. Time-to-market de
+                                    features nuevas reducido en 60%. Onboarding de nuevos devs de 3 semanas a 4 días.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="project__footer">
+                            <div class="project__stack">
+                                <span class="tag">Angular</span>
+                                <span class="tag">Nx</span>
+                                <span class="tag">NgRx</span>
+                                <span class="tag">Module Federation</span>
+                                <span class="tag">Storybook</span>
+                                <span class="tag">Cypress</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project reveal" aria-label="FinTech Mobile App">
+                        <div class="project__header">
+                            <div class="project__number" aria-hidden="true">02</div>
+                            <div class="project__meta">
+                                <h3 class="project__title">FinTech Mobile App</h3>
+                                <span class="project__role">Senior Frontend Developer</span>
+                            </div>
+                        </div>
+
+                        <div class="project__body">
+                            <div class="project__detail">
+                                <h4 class="project__detail-label">Problema</h4>
+                                <p>App nativa para iOS y Android con dos equipos separados, inconsistencias de UX y
+                                    ciclos de release de 6 semanas. El negocio necesitaba iteración semanal.</p>
+                            </div>
+
+                            <div class="project__detail">
+                                <h4 class="project__detail-label">Solución</h4>
+                                <p>Reescritura con Ionic + Capacitor sobre Angular. Un solo codebase para ambas
+                                    plataformas con plugins nativos custom para biometría y notificaciones push.</p>
+                            </div>
+
+                            <div class="project__detail">
+                                <h4 class="project__detail-label">Decisiones técnicas</h4>
+                                <p>Offline-first con IndexedDB y sync strategy personalizada. Arquitectura de plugins
+                                    Capacitor para integraciones nativas. Gesture system custom para UX tipo nativa.</p>
+                            </div>
+
+                            <div class="project__detail">
+                                <h4 class="project__detail-label">Impacto</h4>
+                                <p>De 2 equipos a 1. Release cycle de 6 semanas a 1 semana. Rating en stores: 4.7★.
+                                    Performance percibida indistinguible de nativo según user testing.</p>
+                            </div>
+                        </div>
+
+                        <div class="project__footer">
+                            <div class="project__stack">
+                                <span class="tag">Ionic</span>
+                                <span class="tag">Angular</span>
+                                <span class="tag">Capacitor</span>
+                                <span class="tag">IndexedDB</span>
+                                <span class="tag">Biometrics</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project reveal" aria-label="Real-time Collaboration Tool">
+                        <div class="project__header">
+                            <div class="project__number" aria-hidden="true">03</div>
+                            <div class="project__meta">
+                                <h3 class="project__title">Real-time Collaboration Tool</h3>
+                                <span class="project__role">Frontend Architect</span>
+                            </div>
+                        </div>
+
+                        <div class="project__body">
+                            <div class="project__detail">
+                                <h4 class="project__detail-label">Problema</h4>
+                                <p>Herramienta de colaboración en tiempo real con 10K+ usuarios concurrentes. Los
+                                    editores existentes no soportaban el modelo de datos del dominio.</p>
+                            </div>
+
+                            <div class="project__detail">
+                                <h4 class="project__detail-label">Solución</h4>
+                                <p>SPA en React con custom CRDT para resolución de conflictos. WebSocket layer con
+                                    reconnection strategy y optimistic updates. Editor custom con canvas rendering.</p>
+                            </div>
+
+                            <div class="project__detail">
+                                <h4 class="project__detail-label">Decisiones técnicas</h4>
+                                <p>Zustand para estado local, CRDT sync para estado distribuido. Web Workers para
+                                    operaciones pesadas de merge. Virtual scrolling custom para listas de 100K+ items.
+                                </p>
+                            </div>
+
+                            <div class="project__detail">
+                                <h4 class="project__detail-label">Impacto</h4>
+                                <p>Latencia de sync &lt;100ms p99. Zero data loss en edge cases de conexión. 10K
+                                    usuarios concurrentes sin degradación. Adoptado como herramienta principal por 3
+                                    enterprise clients.</p>
+                            </div>
+                        </div>
+
+                        <div class="project__footer">
+                            <div class="project__stack">
+                                <span class="tag">React</span>
+                                <span class="tag">WebSockets</span>
+                                <span class="tag">CRDT</span>
+                                <span class="tag">Web Workers</span>
+                                <span class="tag">Canvas</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4 -->
+                    <article class="project reveal" aria-label="Design System & Component Library">
+                        <div class="project__header">
+                            <div class="project__number" aria-hidden="true">04</div>
+                            <div class="project__meta">
+                                <h3 class="project__title">Design System & Component Library</h3>
+                                <span class="project__role">Technical Lead</span>
+                            </div>
+                        </div>
+
+                        <div class="project__body">
+                            <div class="project__detail">
+                                <h4 class="project__detail-label">Problema</h4>
+                                <p>Organización con 8 productos frontend, cada uno con su propio set de componentes.
+                                    Inconsistencia visual, duplicación masiva y costos de mantenimiento insostenibles.
+                                </p>
+                            </div>
+
+                            <div class="project__detail">
+                                <h4 class="project__detail-label">Solución</h4>
+                                <p>Design system framework-agnostic con Web Components core y wrappers para Angular y
+                                    React. Tokens de diseño, documentación interactiva y governance model.</p>
+                            </div>
+
+                            <div class="project__detail">
+                                <h4 class="project__detail-label">Decisiones técnicas</h4>
+                                <p>Lit para Web Components base. Generación automática de wrappers Angular/React. Design
+                                    tokens con Style Dictionary. Chromatic para visual regression testing.</p>
+                            </div>
+
+                            <div class="project__detail">
+                                <h4 class="project__detail-label">Impacto</h4>
+                                <p>80% reducción en código UI duplicado. Tiempo de desarrollo de features UI reducido un
+                                    40%. Consistencia visual del 95% medida por Chromatic. Adoptado por los 8 equipos en
+                                    3 meses.</p>
+                            </div>
+                        </div>
+
+                        <div class="project__footer">
+                            <div class="project__stack">
+                                <span class="tag">Lit</span>
+                                <span class="tag">Web Components</span>
+                                <span class="tag">Storybook</span>
+                                <span class="tag">Chromatic</span>
+                                <span class="tag">Style Dictionary</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- OPEN SOURCE SECTION                         -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section class="section opensource" id="opensource" aria-labelledby="opensource-title">
+            <div class="section__container">
+                <header class="section__header reveal">
+                    <span class="section__index" aria-hidden="true">04</span>
+                    <h2 class="section__title" id="opensource-title">open_source<span
+                            class="section__title-dot">.</span></h2>
+                    <div class="section__line" aria-hidden="true"></div>
+                </header>
+
+                <div class="opensource__grid">
+                    <div class="opensource__philosophy reveal">
+                        <blockquote class="opensource__quote">
+                            <p>"El software que más me ha enseñado no lo escribí yo. Lo leí, lo entendí, y luego
+                                contribuí a mejorarlo."</p>
+                        </blockquote>
+
+                        <p>
+                            Contribuir a open source no es altruismo — es <strong>ingeniería recíproca</strong>. Cada PR
+                            que abro en un proyecto público me obliga a entender código que no escribí, adaptarme a
+                            convenciones que no elegí, y comunicar decisiones técnicas a personas que no conozco. No
+                            existe mejor entrenamiento para un senior engineer.
+                        </p>
+                        <p>
+                            Mis contribuciones se enfocan en <strong>developer tooling</strong>, <strong>component
+                                libraries</strong> y <strong>documentación técnica</strong>. Creo firmemente que la
+                            calidad del ecosistema define la calidad de los productos que construimos sobre él.
+                        </p>
+                    </div>
+
+                    <div class="opensource__contributions reveal">
+                        <h3 class="opensource__subtitle">
+                            <span class="code-comment">// Tipo de contribuciones</span>
+                        </h3>
+                        <ul class="opensource__list">
+                            <li class="opensource__item">
+                                <span class="opensource__item-icon" aria-hidden="true">⚙️</span>
+                                <div>
+                                    <strong>Bug fixes & performance patches</strong>
+                                    <p>Identificar y resolver issues en librerías que uso en producción. Si encuentro un
+                                        bug, lo fixeo upstream.</p>
+                                </div>
+                            </li>
+                            <li class="opensource__item">
+                                <span class="opensource__item-icon" aria-hidden="true">📖</span>
+                                <div>
+                                    <strong>Documentación y ejemplos</strong>
+                                    <p>La documentación es interfaz de usuario para developers. Mejorarla es una
+                                        contribución de primer nivel.</p>
+                                </div>
+                            </li>
+                            <li class="opensource__item">
+                                <span class="opensource__item-icon" aria-hidden="true">🧩</span>
+                                <div>
+                                    <strong>Plugins y extensiones</strong>
+                                    <p>Desarrollo de plugins para herramientas del ecosistema, desde ESLint rules hasta
+                                        Vite plugins.</p>
+                                </div>
+                            </li>
+                            <li class="opensource__item">
+                                <span class="opensource__item-icon" aria-hidden="true">🔍</span>
+                                <div>
+                                    <strong>Code review en PRs públicas</strong>
+                                    <p>Revisar código ajeno es contribuir. Feedback constructivo y técnicamente sólido
+                                        ayuda a toda la comunidad.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="opensource__cta reveal">
+                    <a href="https://github.com/nicodevvv" class="btn btn--ghost" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        <span class="btn__text">Ver perfil en GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- PHILOSOPHY SECTION                          -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section class="section philosophy" id="philosophy" aria-labelledby="philosophy-title">
+            <div class="section__container">
+                <header class="section__header reveal">
+                    <span class="section__index" aria-hidden="true">05</span>
+                    <h2 class="section__title" id="philosophy-title">filosofía<span class="section__title-dot">.</span>
+                    </h2>
+                    <div class="section__line" aria-hidden="true"></div>
+                </header>
+
+                <div class="philosophy__grid">
+                    <article class="philosophy__card reveal">
+                        <div class="philosophy__card-number" aria-hidden="true">01</div>
+                        <h3 class="philosophy__card-title">La complejidad es deuda</h3>
+                        <p>
+                            Cada abstracción añadida es un costo de mantenimiento. Mi trabajo es encontrar el nivel
+                            mínimo de abstracción que resuelve el problema <em>real</em>, no el teórico. Refactorizar
+                            hacia la simplicidad es más difícil que sobre-ingeniar, y mucho más valioso.
+                        </p>
+                    </article>
+
+                    <article class="philosophy__card reveal">
+                        <div class="philosophy__card-number" aria-hidden="true">02</div>
+                        <h3 class="philosophy__card-title">Los frameworks cambian, los fundamentos no</h3>
+                        <p>
+                            Invierto más tiempo entendiendo cómo funciona el browser que memorizando APIs de frameworks.
+                            Cuando entiendes el event loop, el rendering pipeline y el modelo de memoria, cualquier
+                            framework es una herramienta más — no una identidad.
+                        </p>
+                    </article>
+
+                    <article class="philosophy__card reveal">
+                        <div class="philosophy__card-number" aria-hidden="true">03</div>
+                        <h3 class="philosophy__card-title">Performance es empatía</h3>
+                        <p>
+                            Optimizar no es un ejercicio técnico narcisista. Es respetar el tiempo y el dispositivo de
+                            cada persona que usa lo que construyo. Ese usuario con conexión 3G en un dispositivo de gama
+                            baja merece la misma experiencia que el CTO con su MacBook Pro.
+                        </p>
+                    </article>
+
+                    <article class="philosophy__card reveal">
+                        <div class="philosophy__card-number" aria-hidden="true">04</div>
+                        <h3 class="philosophy__card-title">El código es comunicación</h3>
+                        <p>
+                            Escribo código para humanos, no para compiladores. Naming explícito, funciones pequeñas con
+                            propósito claro, tests que cuentan historias. Si necesitas un comentario para explicar qué
+                            hace tu código, tu código necesita reescribirse.
+                        </p>
+                    </article>
+
+                    <article class="philosophy__card reveal">
+                        <div class="philosophy__card-number" aria-hidden="true">05</div>
+                        <h3 class="philosophy__card-title">Feedback loops cortos</h3>
+                        <p>
+                            Desde hot reload hasta CI en cada push, cada segundo de espera es fricción que mata la
+                            calidad. Optimizo obsesivamente los ciclos de feedback del equipo: builds rápidos, tests que
+                            corren en segundos, deploys automatizados.
+                        </p>
+                    </article>
+
+                    <article class="philosophy__card reveal">
+                        <div class="philosophy__card-number" aria-hidden="true">06</div>
+                        <h3 class="philosophy__card-title">Mentoría como multiplicador</h3>
+                        <p>
+                            Un senior que no hace crecer a su equipo no es senior — es un IC con más años. Code reviews
+                            como teaching moments. Pair programming como herramienta de transferencia de criterio.
+                            Documentar decisiones, no solo diseños.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- CONTACT SECTION                             -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section class="section contact" id="contact" aria-labelledby="contact-title">
+            <div class="section__container">
+                <header class="section__header reveal">
+                    <span class="section__index" aria-hidden="true">06</span>
+                    <h2 class="section__title" id="contact-title">contacto<span class="section__title-dot">.</span></h2>
+                    <div class="section__line" aria-hidden="true"></div>
+                </header>
+
+                <div class="contact__content reveal">
+                    <p class="contact__lead">
+                        ¿Tienes un proyecto que necesita <strong>criterio técnico real</strong>?<br>
+                        ¿Tu equipo necesita a alguien que no sólo escriba código, sino que <strong>eleve la
+                            barra</strong>?
+                    </p>
+                    <p class="contact__sub">
+                        Hablemos. Sin humo. Sin buzzwords. Solo ingeniería.
+                    </p>
+
+                    <div class="contact__terminal" aria-hidden="true">
+                        <div class="contact__terminal-header">
+                            <span class="hero__terminal-dot hero__terminal-dot--red"></span>
+                            <span class="hero__terminal-dot hero__terminal-dot--yellow"></span>
+                            <span class="hero__terminal-dot hero__terminal-dot--green"></span>
+                        </div>
+                        <div class="contact__terminal-body">
+                            <p><span class="code-keyword">$</span> echo $CONTACT</p>
+                            <p class="contact__terminal-output">pedro@email.com</p>
+                            <p><span class="code-keyword">$</span> curl -X POST /hire-pedro --data '{"ready": true}'</p>
+                            <p class="contact__terminal-output">✓ Message sent. Let's build something great.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact__actions">
+                        <a href="mailto:pedro@email.com" class="btn btn--primary btn--large">
+                            <span class="btn__text">Enviar mensaje</span>
+                            <span class="btn__icon" aria-hidden="true">→</span>
+                        </a>
+                    </div>
+
+                    <div class="contact__links">
+                        <a href="https://github.com/pedro" target="_blank" rel="noopener noreferrer"
+                            class="contact__link" aria-label="GitHub">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/pedro" target="_blank" rel="noopener noreferrer"
+                            class="contact__link" aria-label="LinkedIn">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/pedro" target="_blank" rel="noopener noreferrer"
+                            class="contact__link" aria-label="Twitter / X">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- FOOTER                                      -->
+    <!-- ═══════════════════════════════════════════ -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__container">
+            <p class="footer__text">
+                <span class="code-comment">// Diseñado y desarrollado con criterio por Pedro</span>
+            </p>
+            <p class="footer__meta">
+                <span>Vanilla HTML · CSS · JS</span>
+                <span class="footer__divider" aria-hidden="true">·</span>
+                <span>Zero dependencies</span>
+                <span class="footer__divider" aria-hidden="true">·</span>
+                <span>Lighthouse 100</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Audio for key sound (loaded lazily) -->
+    <audio id="keySound" preload="none">
+        <source src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA="
+            type="audio/wav">
+    </audio>
+
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>
