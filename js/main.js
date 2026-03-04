@@ -33,6 +33,7 @@
         }
       });
     },
+
     {
       threshold: 0.1,
       rootMargin: "0px 0px -60px 0px",
@@ -62,7 +63,9 @@
       }
     }
 
-    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("scroll", onScroll, {
+      passive: true,
+    });
 
     // Mobile toggle
     navToggle.addEventListener("click", () => {
@@ -104,16 +107,26 @@
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const id = entry.target.getAttribute("id");
+
             navLinks.forEach((link) => {
               link.classList.toggle(
                 "nav__link--active",
-                link.getAttribute("href") === `#${id}`,
+                link.getAttribute("href") ===
+                  `#$ {
+                                                id
+                                            }
+
+                                            `,
               );
             });
           }
         });
       },
-      { threshold: 0.3, rootMargin: "-20% 0px -60% 0px" },
+
+      {
+        threshold: 0.3,
+        rootMargin: "-20% 0px -60% 0px",
+      },
     );
 
     sections.forEach((section) => sectionObserver.observe(section));
@@ -156,6 +169,7 @@
 
     function playKeySound() {
       if (!soundEnabled) return;
+
       try {
         createClickSound();
       } catch (e) {
@@ -223,9 +237,13 @@
           charIndex++;
           typeTimer = setTimeout(type, typeDelay + Math.random() * 30);
         } else {
-          cursorTimer = setTimeout(() => {
-            comment.style.borderRight = "none";
-          }, 1500);
+          cursorTimer = setTimeout(
+            () => {
+              comment.style.borderRight = "none";
+            },
+
+            1500,
+          );
         }
       }
 
@@ -254,9 +272,13 @@
     keycap.addEventListener("click", () => {
       keycap.style.transform = "translateY(4px)";
 
-      setTimeout(() => {
-        keycap.style.transform = "";
-      }, 150);
+      setTimeout(
+        () => {
+          keycap.style.transform = "";
+        },
+
+        150,
+      );
 
       // Toggle sound on keycap click too
       if (!soundEnabled) {
@@ -272,26 +294,23 @@
   // ═══════════════════════════════════════════════════════════
   function initEasterEgg() {
     const styles = {
-      header: `
-        font-size: 16px;
-        font-weight: bold;
-        color: #64ffda;
-        background: #0a0a0f;
-        padding: 12px 20px;
-        border-left: 3px solid #64ffda;
-      `,
-      text: `
-        font-size: 12px;
-        color: #8888a0;
-        background: #0a0a0f;
-        padding: 8px 20px;
-      `,
-      accent: `
-        font-size: 12px;
-        color: #64ffda;
-        background: #0a0a0f;
-        padding: 8px 20px;
-      `,
+      header: ` font-size: 16px;
+                font-weight: bold;
+                color: #64ffda;
+                background: #0a0a0f;
+                padding: 12px 20px;
+                border-left: 3px solid #64ffda;
+                `,
+      text: ` font-size: 12px;
+                color: #8888a0;
+                background: #0a0a0f;
+                padding: 8px 20px;
+                `,
+      accent: ` font-size: 12px;
+                color: #64ffda;
+                background: #0a0a0f;
+                padding: 8px 20px;
+                `,
     };
 
     console.log("%c{P} Portfolio", styles.header);
@@ -360,7 +379,11 @@
         if (!target) return;
 
         e.preventDefault();
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
+
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
 
         // Update URL without triggering scroll
         history.pushState(null, "", targetId);
@@ -377,6 +400,7 @@
 
     // Subtle parallax on mouse move
     const hero = $("#hero");
+
     hero.addEventListener("mousemove", (e) => {
       if (window.innerWidth < 1024) return;
 
@@ -384,20 +408,28 @@
       const x = (e.clientX - rect.left) / rect.width - 0.5;
       const y = (e.clientY - rect.top) / rect.height - 0.5;
 
-      codeBlock.style.transform = `
-        perspective(1000px) 
-        rotateY(${x * 3}deg) 
-        rotateX(${-y * 3}deg)
-        translateZ(0)
-      `;
+      codeBlock.style.transform = ` perspective(1000px) rotateY($ {
+                            x * 3
+                        }
+
+                        deg) rotateX($ {
+                            -y * 3
+                        }
+
+                        deg) translateZ(0) `;
     });
 
     hero.addEventListener("mouseleave", () => {
       codeBlock.style.transform = "";
       codeBlock.style.transition = "transform 0.5s ease-out";
-      setTimeout(() => {
-        codeBlock.style.transition = "";
-      }, 500);
+
+      setTimeout(
+        () => {
+          codeBlock.style.transition = "";
+        },
+
+        500,
+      );
     });
   }
 

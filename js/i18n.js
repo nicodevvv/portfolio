@@ -27,7 +27,7 @@ const translations = {
     "about.lead":
       "No soy un desarrollador que escribe código. Soy un <strong>ingeniero que diseña soluciones</strong> y las traduce en interfaces que funcionan, escalan y se mantienen.",
     "about.p1":
-      "Llevo más de 8 años construyendo productos digitales en equipos de alto rendimiento. He trabajado desde startups que necesitaban velocidad extrema hasta empresas que exigían arquitecturas enterprise con estándares rigurosos. En ambos escenarios, mi objetivo es el mismo: <strong>entregar software que genere impacto real</strong>.",
+      "Llevo más de 6 años construyendo productos digitales en equipos de alto rendimiento. He trabajado desde startups que necesitaban velocidad extrema hasta empresas que exigían arquitecturas enterprise con estándares rigurosos. En ambos escenarios, mi objetivo es el mismo: <strong>entregar software que genere impacto real</strong>.",
     "about.p2":
       "Mi curiosidad tecnológica no tiene interruptor de apagado. Exploro constantemente desde nuevos paradigmas de estado hasta optimizaciones de rendering, pasando por hardware — sí, tengo opiniones fuertes sobre switches de teclados mecánicos. Esa misma curiosidad me ha llevado a contribuir a proyectos open source, porque creo que el conocimiento que no se comparte es conocimiento que se pierde.",
     "about.p3":
@@ -63,42 +63,51 @@ const translations = {
 
     // Projects
     "projects.title": "proyectos",
-    "projects.label_problem": "Problema",
-    "projects.label_solution": "Solución",
-    "projects.label_decisions": "Decisiones técnicas",
-    "projects.label_impact": "Impacto",
-    "projects.p1_problem":
-      "Plataforma legacy con 200+ vistas acopladas, tiempos de build de 15 minutos y zero test coverage. El equipo no podía iterar sin romper funcionalidades existentes.",
-    "projects.p1_solution":
-      "Migración incremental a Angular con arquitectura de micro-frontends usando Module Federation. Design system propio con Storybook. Pipeline de CI/CD con quality gates automatizados.",
-    "projects.p1_decisions":
-      "Nx monorepo para gestionar 12 aplicaciones independientes. Estrategia de estado con NgRx ComponentStore por dominio. Lazy loading agresivo que redujo el bundle inicial un 73%.",
-    "projects.p1_impact":
-      "Build time reducido de 15min a 2min. Test coverage de 0% a 82%. Time-to-market de features nuevas reducido en 60%. Onboarding de nuevos devs de 3 semanas a 4 días.",
-    "projects.p2_problem":
-      "App nativa para iOS y Android con dos equipos separados, inconsistencias de UX y ciclos de release de 6 semanas. El negocio necesitaba iteración semanal.",
-    "projects.p2_solution":
-      "Reescritura con Ionic + Capacitor sobre Angular. Un solo codebase para ambas plataformas con plugins nativos custom para biometría y notificaciones push.",
-    "projects.p2_decisions":
-      "Offline-first con IndexedDB y sync strategy personalizada. Arquitectura de plugins Capacitor para integraciones nativas. Gesture system custom para UX tipo nativa.",
-    "projects.p2_impact":
-      "De 2 equipos a 1. Release cycle de 6 semanas a 1 semana. Rating en stores: 4.7★. Performance percibida indistinguible de nativo según user testing.",
-    "projects.p3_problem":
-      "Herramienta de colaboración en tiempo real con 10K+ usuarios concurrentes. Los editores existentes no soportaban el modelo de datos del dominio.",
-    "projects.p3_solution":
-      "SPA en React con custom CRDT para resolución de conflictos. WebSocket layer con reconnection strategy y optimistic updates. Editor custom con canvas rendering.",
-    "projects.p3_decisions":
-      "Zustand para estado local, CRDT sync para estado distribuido. Web Workers para operaciones pesadas de merge. Virtual scrolling custom para listas de 100K+ items.",
-    "projects.p3_impact":
-      "Latencia de sync <100ms p99. Zero data loss en edge cases de conexión. 10K usuarios concurrentes sin degradación. Adoptado como herramienta principal por 3 enterprise clients.",
-    "projects.p4_problem":
-      "Organización con 8 productos frontend, cada uno con su propio set de componentes. Inconsistencia visual, duplicación masiva y costos de mantenimiento insostenibles.",
-    "projects.p4_solution":
-      "Design system framework-agnostic con Web Components core y wrappers para Angular y React. Tokens de diseño, documentación interactiva y governance model.",
-    "projects.p4_decisions":
-      "Lit para Web Components base. Generación automática de wrappers Angular/React. Design tokens con Style Dictionary. Chromatic para visual regression testing.",
-    "projects.p4_impact":
-      "80% reducción en código UI duplicado. Tiempo de desarrollo de features UI reducido un 40%. Consistencia visual del 95% medida por Chromatic. Adoptado por los 8 equipos en 3 meses.",
+    "projects.label_context": "Contexto",
+    "projects.label_role": "Mi rol",
+    "projects.label_learning": "Aprendizaje clave",
+    "projects.p1_context":
+      "Mi primer proyecto profesional en un equipo de más de 200 personas. Plataforma de gestión de impuestos para ayuntamientos que manejaba millones de registros tributarios. Stack basado en Oracle PL/SQL, .NET Framework y JavaScript/HTML en el frontend.",
+    "projects.p1_role":
+      "Entré como junior y en poco tiempo ascendí a analista programador. Trabajé en todas las capas del sistema: desde procedimientos almacenados en PL/SQL hasta interfaces web completas. Aquí entendí qué significa trabajar en un equipo grande con procesos reales de desarrollo.",
+    "projects.p1_learning":
+      "Aprendí los fundamentos del desarrollo profesional: control de versiones en equipos grandes, revisiones de código, documentación técnica y la importancia de escribir código que otros puedan mantener. Este proyecto me enseñó que el software no es solo código — es comunicación.",
+    "projects.p2_context":
+      "Plataforma digital para que los ciudadanos gestionaran sus trámites municipales online. Mi primer proyecto profesional con Angular, con una cantidad de lógica de negocio en frontend que superaba cualquier cosa que hubiera hecho antes.",
+    "projects.p2_role":
+      "Desarrollo completo de módulos frontend en Angular. Me enfrenté a formularios complejos con validaciones dinámicas, gestión de estados y flujos de navegación no triviales. Fue el proyecto donde me enamoré del frontend.",
+    "projects.p2_learning":
+      'Descubrí que el frontend no era "la parte fácil" sino un mundo con profundidad técnica enorme. Angular me mostró la importancia de la arquitectura en aplicaciones complejas. Punto de inflexión en mi carrera hacia la especialización frontend.',
+    "projects.p3_context":
+      "Aplicación web de tasación inmobiliaria en una empresa pequeña con un proyecto muy exigente. Angular en versiones modernas con mantenimiento correctivo y evolutivo constante. Un ritmo de trabajo que exigía solidez técnica y autonomía.",
+    "projects.p3_role":
+      "Desarrollo y mantenimiento de la plataforma web completa. Correcciones que requerían debugging profundo y evolutivas que exigían diseñar soluciones escalables. Trabajé con versiones modernas de Angular aplicando las mejores prácticas del ecosistema.",
+    "projects.p3_learning":
+      'Consolidé mis habilidades frontend. Entendí la diferencia entre "saber usar un framework" y "dominar un framework". El correctivo me enseñó a leer código ajeno con rigor; el evolutivo, a planificar cambios sin romper lo existente.',
+    "projects.p4_context":
+      "Versión móvil de la plataforma de tasación inmobiliaria. Mi primer proyecto profesional con Ionic, igual de exigente que su versión web. Los tasadores necesitaban una herramienta fiable en campo con funcionalidades offline.",
+    "projects.p4_role":
+      "Desarrollo de la app móvil con Ionic sobre Angular. Adapté funcionalidades complejas de la versión web al entorno mobile, trabajando con plugins nativos y optimizando la experiencia para dispositivos con recursos limitados.",
+    "projects.p4_learning":
+      "Aprendí que el desarrollo mobile tiene sus propias reglas: gestión de memoria, ciclo de vida de la app, interacción con hardware nativo y la importancia crítica de la experiencia offline. Ionic me demostró el poder del desarrollo híbrido bien hecho.",
+    "projects.p5_context":
+      "Sistema de gestión de cursos internos para una organización. Proyecto que diseñé y construí íntegramente desde cero, con trato directo con el cliente. Angular para la web e Ionic para la app móvil, ambas arquitecturas definidas por mí.",
+    "projects.p5_role":
+      "Arquitectura completa, toma de decisiones técnicas, desarrollo full de web y mobile, y comunicación directa con stakeholders. Mi primer proyecto con control total del producto técnico de principio a fin.",
+    "projects.p5_learning":
+      "Descubrí que puedo llevar un proyecto solo de principio a fin. Aprendí a tomar decisiones de arquitectura con responsabilidad total, gestionar expectativas del cliente y balancear deuda técnica con entrega de valor. La autonomía me hizo crecer exponencialmente.",
+    "projects.p6_context":
+      "Plataforma de gestión de recursos internos para optimizar procesos organizacionales. Otro proyecto construido enteramente por mí, desde la definición de la arquitectura hasta la entrega final. Angular + Ionic, misma dinámica de autonomía total.",
+    "projects.p6_role":
+      "Diseño de arquitectura, desarrollo completo web y mobile, y gestión del ciclo de vida del proyecto. Apliqué todo lo aprendido en proyectos anteriores para entregar un producto robusto y mantenible con mayor eficiencia.",
+    "projects.p6_learning":
+      "Confirmé que la experiencia acumulada se traduce en velocidad y calidad. Patrones que antes me costaban semanas ahora los implementaba en días. Este proyecto consolidó mi capacidad como senior capaz de liderar proyectos de forma autónoma.",
+    "projects.p7_context":
+      "Plataforma documental para un ayuntamiento con integración de inteligencia artificial. Mi primer proyecto profesional con React y Python, y mi primera incursión en IA aplicada. Un salto de stack que amplió significativamente mi perfil técnico.",
+    "projects.p7_role":
+      "Desarrollo fullstack completo: frontend en React y backend en Python. Integré modelos de IA para procesamiento y clasificación inteligente de documentos. Mi primer proyecto construyendo mi propio backend profesional.",
+    "projects.p7_learning":
+      "Ampliar mi stack a React + Python me demostró que los principios de buena ingeniería son universales, independientemente del framework. La IA aplicada me abrió una nueva dimensión de posibilidades. La curiosidad es la herramienta más poderosa de un ingeniero.",
 
     // Open Source
     "oss.quote":
@@ -146,7 +155,7 @@ const translations = {
     // Contact
     "contact.title": "contacto",
     "contact.lead":
-      "¿Tienes un proyecto que necesita <strong>criterio técnico real</strong>?<br>¿Tu equipo necesita a alguien que no sólo escriba código, sino que <strong>eleve la barra</strong>?",
+      "¿Tienes un proyecto que necesita <strong>criterio técnico real</strong>?<br>¿Tu equipo necesita a alguien que <strong>no sólo escriba código</strong>?",
     "contact.sub": "Hablemos. Sin humo. Sin buzzwords. Solo ingeniería.",
     "contact.cta": "Enviar mensaje",
 
@@ -176,7 +185,7 @@ const translations = {
     "about.lead":
       "I'm not a developer who writes code. I'm an <strong>engineer who designs solutions</strong> and translates them into interfaces that work, scale, and are maintainable.",
     "about.p1":
-      "For over 8 years I've been building digital products in high-performance teams. I've worked from startups that needed extreme speed to enterprises that demanded rigorous architectural standards. In both scenarios, my goal is the same: <strong>delivering software that creates real impact</strong>.",
+      "For over 6 years I've been building digital products in high-performance teams. I've worked from startups that needed extreme speed to enterprises that demanded rigorous architectural standards. In both scenarios, my goal is the same: <strong>delivering software that creates real impact</strong>.",
     "about.p2":
       "My tech curiosity has no off switch. I'm constantly exploring from new state management paradigms to rendering optimizations, including hardware — yes, I have strong opinions about mechanical keyboard switches. That same curiosity has led me to contribute to open source projects, because I believe knowledge that isn't shared is knowledge that's lost.",
     "about.p3":
@@ -212,42 +221,51 @@ const translations = {
 
     // Projects
     "projects.title": "projects",
-    "projects.label_problem": "Problem",
-    "projects.label_solution": "Solution",
-    "projects.label_decisions": "Technical decisions",
-    "projects.label_impact": "Impact",
-    "projects.p1_problem":
-      "Legacy platform with 200+ coupled views, 15-minute build times, and zero test coverage. The team couldn't iterate without breaking existing functionality.",
-    "projects.p1_solution":
-      "Incremental migration to Angular with micro-frontend architecture using Module Federation. Custom design system with Storybook. CI/CD pipeline with automated quality gates.",
-    "projects.p1_decisions":
-      "Nx monorepo to manage 12 independent applications. State strategy with NgRx ComponentStore per domain. Aggressive lazy loading that reduced the initial bundle by 73%.",
-    "projects.p1_impact":
-      "Build time reduced from 15min to 2min. Test coverage from 0% to 82%. Time-to-market for new features reduced by 60%. New dev onboarding from 3 weeks to 4 days.",
-    "projects.p2_problem":
-      "Native app for iOS and Android with two separate teams, UX inconsistencies, and 6-week release cycles. The business needed weekly iteration.",
-    "projects.p2_solution":
-      "Rewrite with Ionic + Capacitor on Angular. Single codebase for both platforms with custom native plugins for biometrics and push notifications.",
-    "projects.p2_decisions":
-      "Offline-first with IndexedDB and custom sync strategy. Capacitor plugin architecture for native integrations. Custom gesture system for native-like UX.",
-    "projects.p2_impact":
-      "From 2 teams to 1. Release cycle from 6 weeks to 1 week. Store rating: 4.7★. Perceived performance indistinguishable from native according to user testing.",
-    "projects.p3_problem":
-      "Real-time collaboration tool with 10K+ concurrent users. Existing editors didn't support the domain data model.",
-    "projects.p3_solution":
-      "React SPA with custom CRDT for conflict resolution. WebSocket layer with reconnection strategy and optimistic updates. Custom editor with canvas rendering.",
-    "projects.p3_decisions":
-      "Zustand for local state, CRDT sync for distributed state. Web Workers for heavy merge operations. Custom virtual scrolling for 100K+ item lists.",
-    "projects.p3_impact":
-      "Sync latency <100ms p99. Zero data loss on connection edge cases. 10K concurrent users without degradation. Adopted as primary tool by 3 enterprise clients.",
-    "projects.p4_problem":
-      "Organization with 8 frontend products, each with its own component set. Visual inconsistency, massive duplication, and unsustainable maintenance costs.",
-    "projects.p4_solution":
-      "Framework-agnostic design system with Web Components core and Angular/React wrappers. Design tokens, interactive documentation, and governance model.",
-    "projects.p4_decisions":
-      "Lit for base Web Components. Automatic generation of Angular/React wrappers. Design tokens with Style Dictionary. Chromatic for visual regression testing.",
-    "projects.p4_impact":
-      "80% reduction in duplicate UI code. UI feature development time reduced by 40%. 95% visual consistency measured by Chromatic. Adopted by all 8 teams in 3 months.",
+    "projects.label_context": "Context",
+    "projects.label_role": "My role",
+    "projects.label_learning": "Key learning",
+    "projects.p1_context":
+      "My first professional project in a team of over 200 people. A tax management platform for municipalities handling millions of tax records. Stack based on Oracle PL/SQL, .NET Framework, and JavaScript/HTML on the frontend.",
+    "projects.p1_role":
+      "I joined as a junior and quickly advanced to analyst programmer. I worked across all system layers: from PL/SQL stored procedures to complete web interfaces. This is where I understood what it means to work in a large team with real development processes.",
+    "projects.p1_learning":
+      "I learned the fundamentals of professional development: version control in large teams, code reviews, technical documentation, and the importance of writing code that others can maintain. This project taught me that software isn't just code — it's communication.",
+    "projects.p2_context":
+      "A digital platform for citizens to manage their municipal procedures online. My first professional project with Angular, with an amount of frontend business logic that exceeded anything I had done before.",
+    "projects.p2_role":
+      "Full development of frontend modules in Angular. I faced complex forms with dynamic validations, state management, and non-trivial navigation flows. This was the project where I fell in love with frontend development.",
+    "projects.p2_learning":
+      'I discovered that frontend wasn\'t "the easy part" but a world with enormous technical depth. Angular showed me the importance of architecture in complex applications. The turning point in my career toward frontend specialization.',
+    "projects.p3_context":
+      "A real estate appraisal web application at a small company with a highly demanding project. Modern Angular versions with constant corrective and evolutionary maintenance. A work pace that demanded technical solidity and autonomy.",
+    "projects.p3_role":
+      "Development and maintenance of the complete web platform. Corrective work required deep debugging; evolutionary work required designing scalable solutions. I worked with modern Angular versions applying ecosystem best practices.",
+    "projects.p3_learning":
+      'I consolidated my frontend skills. I understood the difference between "knowing how to use a framework" and "mastering a framework." Corrective maintenance taught me to read others\' code rigorously; evolutionary, to plan changes without breaking existing functionality.',
+    "projects.p4_context":
+      "Mobile version of the real estate appraisal platform. My first professional project with Ionic, equally demanding as its web counterpart. Appraisers needed a reliable field tool with offline capabilities.",
+    "projects.p4_role":
+      "Development of the mobile app with Ionic on Angular. I adapted complex web functionalities to the mobile environment, working with native plugins and optimizing the experience for resource-limited devices.",
+    "projects.p4_learning":
+      "I learned that mobile development has its own rules: memory management, app lifecycle, native hardware interaction, and the critical importance of offline experience. Ionic showed me the power of well-executed hybrid development.",
+    "projects.p5_context":
+      "Internal course management system for an organization. A project I designed and built entirely from scratch, with direct client contact. Angular for the web and Ionic for the mobile app, both architectures defined by me.",
+    "projects.p5_role":
+      "Complete project architecture, technical decision-making, full web and mobile development, and direct communication with stakeholders. My first project with total control of the technical product from start to finish.",
+    "projects.p5_learning":
+      "I discovered I could carry a project alone from beginning to end. I learned to make architectural decisions with full responsibility, manage client expectations, and balance technical debt with value delivery. Autonomy made me grow exponentially.",
+    "projects.p6_context":
+      "Internal resource management platform to optimize organizational processes. Another project built entirely by me, from architecture definition to final delivery. Angular + Ionic, same dynamic of total autonomy.",
+    "projects.p6_role":
+      "Architecture design, complete web and mobile development, and project lifecycle management. I applied everything learned from previous projects to deliver a robust and maintainable product with greater efficiency.",
+    "projects.p6_learning":
+      "I confirmed that accumulated experience translates into speed and quality. Patterns that used to take me weeks I now implemented in days. This project consolidated my ability as a senior developer capable of leading projects autonomously.",
+    "projects.p7_context":
+      "Document management platform for a city council with artificial intelligence integration. My first professional project with React and Python, and my first foray into applied AI. A stack shift that significantly broadened my technical profile.",
+    "projects.p7_role":
+      "Full-stack development: React frontend and Python backend. I integrated AI models for intelligent document processing and classification. My first project building my own professional backend.",
+    "projects.p7_learning":
+      "Expanding my stack to React + Python showed me that good engineering principles are universal, regardless of the framework. Applied AI opened a new dimension of possibilities. Curiosity is an engineer's most powerful tool.",
 
     // Open Source
     "oss.quote":
