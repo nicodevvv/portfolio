@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   ANTIGRAVITY PORTFOLIO — Design System & Styles
+   PORTFOLIO — Design System & Styles
    Senior Frontend Engineer Portfolio
    Zero dependencies. Pure CSS. Maximum performance.
    ═══════════════════════════════════════════════════════════ */
@@ -399,7 +399,56 @@ em {
 }
 
 .nav__sound-toggle {
+  margin-left: var(--space-sm);
+}
+
+/* Language Toggle */
+.nav__actions-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
   margin-left: var(--space-md);
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0.3em 0.6em;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  background: none;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--text-tertiary);
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+.lang-btn:hover {
+  border-color: var(--border-accent);
+  color: var(--accent-primary);
+}
+
+.lang-btn__current {
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+.lang-btn__separator {
+  color: var(--text-muted);
+  margin: 0 1px;
+}
+
+.lang-btn__other {
+  color: var(--text-tertiary);
+  font-weight: 400;
+}
+
+.lang-btn:hover .lang-btn__other {
+  color: var(--text-secondary);
 }
 
 .sound-btn {
@@ -1314,6 +1363,15 @@ em {
 
   .nav__sound-toggle {
     display: none;
+  }
+
+  .nav__actions-group {
+    margin-left: auto;
+  }
+
+  .lang-btn {
+    font-size: var(--text-xs);
+    padding: 0.25em 0.5em;
   }
 
   .hero {

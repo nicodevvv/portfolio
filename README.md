@@ -1,7 +1,7 @@
-# Antigravity Portfolio
+#  Portfolio
 
-> Portfolio profesional de Senior Frontend Engineer.  
-> HTML · CSS · JS vanilla. Zero dependencias. Lighthouse 100.
+> Portfolio .  
+> HTML · CSS · JS vanilla. Zero dependencies. Lighthouse 100.
 
 ## Tecnología
 
@@ -15,7 +15,7 @@ Decisión deliberada de construir con **vanilla HTML, CSS y JavaScript**:
 ### Arquitectura
 
 ```
-antigravity-portfolio/
+portfolio/
 ├── index.html          # Markup semántico (single page)
 ├── css/
 │   └── style.css       # Design system + componentes + responsive

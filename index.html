@@ -57,30 +57,39 @@
 
             <ul class="nav__menu" id="navMenu" role="menubar">
                 <li role="none"><a href="#about" class="nav__link" role="menuitem"><span
-                            class="nav__link-index">01.</span> sobre_mí</a></li>
+                            class="nav__link-index">01.</span> <span data-i18n="nav.about">sobre_mí</span></a></li>
                 <li role="none"><a href="#stack" class="nav__link" role="menuitem"><span
                             class="nav__link-index">02.</span> stack</a></li>
                 <li role="none"><a href="#projects" class="nav__link" role="menuitem"><span
-                            class="nav__link-index">03.</span> proyectos</a></li>
+                            class="nav__link-index">03.</span> <span data-i18n="nav.projects">proyectos</span></a></li>
                 <li role="none"><a href="#opensource" class="nav__link" role="menuitem"><span
                             class="nav__link-index">04.</span> open_source</a></li>
                 <li role="none"><a href="#philosophy" class="nav__link" role="menuitem"><span
-                            class="nav__link-index">05.</span> filosofía</a></li>
+                            class="nav__link-index">05.</span> <span data-i18n="nav.philosophy">filosofía</span></a>
+                </li>
                 <li role="none"><a href="#contact" class="nav__link nav__link--cta" role="menuitem"><span
-                            class="nav__link-index">06.</span> contacto</a></li>
+                            class="nav__link-index">06.</span> <span data-i18n="nav.contact">contacto</span></a></li>
             </ul>
 
-            <div class="nav__sound-toggle">
-                <button id="soundToggle" class="sound-btn" aria-label="Activar sonido de teclado"
-                    title="Sonido de teclado mecánico">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path class="sound-off" d="M11 5L6 9H2v6h4l5 4V5z M23 9l-6 6 M17 9l6 6" />
-                        <path class="sound-on"
-                            d="M11 5L6 9H2v6h4l5 4V5z M15.54 8.46a5 5 0 0 1 0 7.07 M19.07 4.93a10 10 0 0 1 0 14.14"
-                            style="display:none" />
-                    </svg>
+            <div class="nav__actions-group">
+                <button id="langToggle" class="lang-btn" aria-label="Switch to English" title="Cambiar idioma">
+                    <span class="lang-btn__current">ES</span>
+                    <span class="lang-btn__separator" aria-hidden="true">/</span>
+                    <span class="lang-btn__other">EN</span>
                 </button>
+
+                <div class="nav__sound-toggle">
+                    <button id="soundToggle" class="sound-btn" aria-label="Activar sonido de teclado"
+                        title="Sonido de teclado mecánico">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path class="sound-off" d="M11 5L6 9H2v6h4l5 4V5z M23 9l-6 6 M17 9l6 6" />
+                            <path class="sound-on"
+                                d="M11 5L6 9H2v6h4l5 4V5z M15.54 8.46a5 5 0 0 1 0 7.07 M19.07 4.93a10 10 0 0 1 0 14.14"
+                                style="display:none" />
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
@@ -103,7 +112,7 @@
                     </div>
 
                     <p class="hero__prefix reveal" aria-hidden="true">
-                        <span class="hero__comment">// Building interfaces that matter</span>
+                        <span class="hero__comment" data-i18n="hero.comment">// Building interfaces that matter</span>
                     </p>
 
                     <h1 class="hero__title reveal">
@@ -113,7 +122,7 @@
                                 aria-hidden="true">_</span></span>
                     </h1>
 
-                    <p class="hero__subtitle reveal">
+                    <p class="hero__subtitle reveal" data-i18n-html="hero.subtitle">
                         Arquitectura frontend robusta, interfaces que escalan y código que otros
                         <em>disfrutan</em> mantener. <br>
                         <strong>Angular</strong> · <strong>React</strong> · <strong>Ionic</strong>
@@ -121,28 +130,28 @@
 
                     <div class="hero__actions reveal">
                         <a href="#projects" class="btn btn--primary">
-                            <span class="btn__text">ver proyectos</span>
+                            <span class="btn__text" data-i18n="hero.cta_projects">ver proyectos</span>
                             <span class="btn__icon" aria-hidden="true">→</span>
                         </a>
                         <a href="#contact" class="btn btn--ghost">
-                            <span class="btn__text">hablemos</span>
+                            <span class="btn__text" data-i18n="hero.cta_talk">hablemos</span>
                         </a>
                     </div>
 
                     <div class="hero__meta reveal" aria-label="Métricas clave">
                         <div class="hero__stat">
                             <span class="hero__stat-value">8+</span>
-                            <span class="hero__stat-label">años de experiencia</span>
+                            <span class="hero__stat-label" data-i18n="hero.stat_years">años de experiencia</span>
                         </div>
                         <div class="hero__stat-divider" aria-hidden="true"></div>
                         <div class="hero__stat">
                             <span class="hero__stat-value">50+</span>
-                            <span class="hero__stat-label">proyectos entregados</span>
+                            <span class="hero__stat-label" data-i18n="hero.stat_projects">proyectos entregados</span>
                         </div>
                         <div class="hero__stat-divider" aria-hidden="true"></div>
                         <div class="hero__stat">
                             <span class="hero__stat-value">OSS</span>
-                            <span class="hero__stat-label">contribuidor activo</span>
+                            <span class="hero__stat-label" data-i18n="hero.stat_oss">contribuidor activo</span>
                         </div>
                     </div>
                 </div>
@@ -191,30 +200,31 @@
             <div class="section__container">
                 <header class="section__header reveal">
                     <span class="section__index" aria-hidden="true">01</span>
-                    <h2 class="section__title" id="about-title">sobre_mí<span class="section__title-dot">.</span></h2>
+                    <h2 class="section__title" id="about-title"><span data-i18n="about.title">sobre_mí</span><span
+                            class="section__title-dot">.</span></h2>
                     <div class="section__line" aria-hidden="true"></div>
                 </header>
 
                 <div class="about__grid">
                     <div class="about__content reveal">
-                        <p class="about__lead">
+                        <p class="about__lead" data-i18n-html="about.lead">
                             No soy un desarrollador que escribe código. Soy un <strong>ingeniero que diseña
                                 soluciones</strong> y las traduce en interfaces que funcionan, escalan y se mantienen.
                         </p>
-                        <p>
+                        <p data-i18n-html="about.p1">
                             Llevo más de 8 años construyendo productos digitales en equipos de alto rendimiento. He
                             trabajado desde startups que necesitaban velocidad extrema hasta empresas que exigían
                             arquitecturas enterprise con estándares rigurosos. En ambos escenarios, mi objetivo es el
                             mismo: <strong>entregar software que genere impacto real</strong>.
                         </p>
-                        <p>
+                        <p data-i18n-html="about.p2">
                             Mi curiosidad tecnológica no tiene interruptor de apagado. Exploro constantemente desde
                             nuevos paradigmas de estado hasta optimizaciones de rendering, pasando por hardware — sí,
                             tengo opiniones fuertes sobre switches de teclados mecánicos. Esa misma curiosidad me ha
                             llevado a contribuir a proyectos open source, porque creo que el conocimiento que no se
                             comparte es conocimiento que se pierde.
                         </p>
-                        <p>
+                        <p data-i18n-html="about.p3">
                             Creo en la <strong>simplificación agresiva</strong>: el mejor código no es el más
                             inteligente, es el que cualquier persona del equipo puede entender, extender y confiar. La
                             complejidad accidental es el enemigo. La claridad es la feature más importante.
@@ -224,32 +234,32 @@
                     <aside class="about__sidebar reveal">
                         <div class="about__principles">
                             <h3 class="about__sidebar-title">
-                                <span class="code-comment">// Principios</span>
+                                <span class="code-comment" data-i18n="about.principles_title">// Principios</span>
                             </h3>
                             <ul class="about__principle-list">
                                 <li class="about__principle">
                                     <span class="about__principle-icon" aria-hidden="true">▹</span>
-                                    Arquitectura antes que código
+                                    <span data-i18n="about.principle1">Arquitectura antes que código</span>
                                 </li>
                                 <li class="about__principle">
                                     <span class="about__principle-icon" aria-hidden="true">▹</span>
-                                    Performance no es afterthought
+                                    <span data-i18n="about.principle2">Performance no es afterthought</span>
                                 </li>
                                 <li class="about__principle">
                                     <span class="about__principle-icon" aria-hidden="true">▹</span>
-                                    Tests como documentación viva
+                                    <span data-i18n="about.principle3">Tests como documentación viva</span>
                                 </li>
                                 <li class="about__principle">
                                     <span class="about__principle-icon" aria-hidden="true">▹</span>
-                                    DX = velocidad del equipo
+                                    <span data-i18n="about.principle4">DX = velocidad del equipo</span>
                                 </li>
                                 <li class="about__principle">
                                     <span class="about__principle-icon" aria-hidden="true">▹</span>
-                                    Simplificar antes de escalar
+                                    <span data-i18n="about.principle5">Simplificar antes de escalar</span>
                                 </li>
                                 <li class="about__principle">
                                     <span class="about__principle-icon" aria-hidden="true">▹</span>
-                                    Code reviews como mentoría
+                                    <span data-i18n="about.principle6">Code reviews como mentoría</span>
                                 </li>
                             </ul>
                         </div>
@@ -276,7 +286,7 @@
                     <div class="section__line" aria-hidden="true"></div>
                 </header>
 
-                <p class="stack__intro reveal">
+                <p class="stack__intro reveal" data-i18n-html="stack.intro">
                     No colecciono logos de tecnologías. Cada herramienta aquí representa <strong>experiencia real en
                         producción</strong>, decisiones de arquitectura fundamentadas y horas de profundización técnica.
                 </p>
@@ -294,7 +304,8 @@
                             <span class="stack__card-level">Expert</span>
                         </div>
                         <h3 class="stack__card-title">Angular</h3>
-                        <p class="stack__card-desc">Arquitecturas enterprise, signals, standalone components, RxJS
+                        <p class="stack__card-desc" data-i18n="stack.angular_desc">Arquitecturas enterprise, signals,
+                            standalone components, RxJS
                             avanzado, lazy loading estratégico, state management con NgRx/signals.</p>
                         <div class="stack__card-tags">
                             <span class="tag">RxJS</span>
@@ -315,7 +326,8 @@
                             <span class="stack__card-level">Expert</span>
                         </div>
                         <h3 class="stack__card-title">React</h3>
-                        <p class="stack__card-desc">Hooks patterns avanzados, server components, suspense boundaries,
+                        <p class="stack__card-desc" data-i18n="stack.react_desc">Hooks patterns avanzados, server
+                            components, suspense boundaries,
                             custom renderers, optimización de re-renders, micro-frontends.</p>
                         <div class="stack__card-tags">
                             <span class="tag">Next.js</span>
@@ -336,7 +348,8 @@
                             <span class="stack__card-level">Expert</span>
                         </div>
                         <h3 class="stack__card-title">Ionic</h3>
-                        <p class="stack__card-desc">Apps híbridas de alto rendimiento, Capacitor plugins nativos,
+                        <p class="stack__card-desc" data-i18n="stack.ionic_desc">Apps híbridas de alto rendimiento,
+                            Capacitor plugins nativos,
                             offline-first patterns, optimización de bundle size, PWAs avanzadas.</p>
                         <div class="stack__card-tags">
                             <span class="tag">Capacitor</span>
@@ -353,7 +366,8 @@
                             <span class="stack__card-level">Advanced</span>
                         </div>
                         <h3 class="stack__card-title">Testing</h3>
-                        <p class="stack__card-desc">Jest, Cypress, Playwright, Testing Library. TDD cuando suma valor.
+                        <p class="stack__card-desc" data-i18n="stack.testing_desc">Jest, Cypress, Playwright, Testing
+                            Library. TDD cuando suma valor.
                             Tests que documentan comportamiento, no implementación.</p>
                     </article>
 
@@ -362,8 +376,9 @@
                             <span class="stack__card-emoji" aria-hidden="true">🏗️</span>
                             <span class="stack__card-level">Advanced</span>
                         </div>
-                        <h3 class="stack__card-title">Arquitectura</h3>
-                        <p class="stack__card-desc">Micro-frontends, module federation, monorepos con Nx, clean
+                        <h3 class="stack__card-title" data-i18n="stack.architecture">Arquitectura</h3>
+                        <p class="stack__card-desc" data-i18n="stack.architecture_desc">Micro-frontends, module
+                            federation, monorepos con Nx, clean
                             architecture, domain-driven design en frontend, dependency injection patterns.</p>
                     </article>
 
@@ -373,7 +388,8 @@
                             <span class="stack__card-level">Advanced</span>
                         </div>
                         <h3 class="stack__card-title">Performance</h3>
-                        <p class="stack__card-desc">Core Web Vitals, bundle optimization, tree shaking, code splitting,
+                        <p class="stack__card-desc" data-i18n="stack.perf_desc">Core Web Vitals, bundle optimization,
+                            tree shaking, code splitting,
                             rendering strategies, profiling con DevTools, Lighthouse CI.</p>
                     </article>
 
@@ -383,7 +399,8 @@
                             <span class="stack__card-level">Advanced</span>
                         </div>
                         <h3 class="stack__card-title">Dev Experience</h3>
-                        <p class="stack__card-desc">CI/CD pipelines, ESLint custom rules, Prettier, Husky, conventional
+                        <p class="stack__card-desc" data-i18n="stack.dx_desc">CI/CD pipelines, ESLint custom rules,
+                            Prettier, Husky, conventional
                             commits, mono-repo tooling, Storybook, documentación técnica.</p>
                     </article>
 
@@ -393,7 +410,8 @@
                             <span class="stack__card-level">Advanced</span>
                         </div>
                         <h3 class="stack__card-title">UI/UX Engineering</h3>
-                        <p class="stack__card-desc">Design systems, CSS architecture (BEM/utility), animaciones
+                        <p class="stack__card-desc" data-i18n="stack.uiux_desc">Design systems, CSS architecture
+                            (BEM/utility), animaciones
                             performantes, accesibilidad WCAG, responsive design avanzado, Figma-to-code.</p>
                     </article>
                 </div>
@@ -407,7 +425,8 @@
             <div class="section__container">
                 <header class="section__header reveal">
                     <span class="section__index" aria-hidden="true">03</span>
-                    <h2 class="section__title" id="projects-title">proyectos<span class="section__title-dot">.</span>
+                    <h2 class="section__title" id="projects-title"><span
+                            data-i18n="projects.title">proyectos</span><span class="section__title-dot">.</span>
                     </h2>
                     <div class="section__line" aria-hidden="true"></div>
                 </header>
@@ -425,28 +444,33 @@
 
                         <div class="project__body">
                             <div class="project__detail">
-                                <h4 class="project__detail-label">Problema</h4>
-                                <p>Plataforma legacy con 200+ vistas acopladas, tiempos de build de 15 minutos y zero
+                                <h4 class="project__detail-label" data-i18n="projects.label_problem">Problema</h4>
+                                <p data-i18n="projects.p1_problem">Plataforma legacy con 200+ vistas acopladas, tiempos
+                                    de build de 15 minutos y zero
                                     test coverage. El equipo no podía iterar sin romper funcionalidades existentes.</p>
                             </div>
 
                             <div class="project__detail">
-                                <h4 class="project__detail-label">Solución</h4>
-                                <p>Migración incremental a Angular con arquitectura de micro-frontends usando Module
+                                <h4 class="project__detail-label" data-i18n="projects.label_solution">Solución</h4>
+                                <p data-i18n="projects.p1_solution">Migración incremental a Angular con arquitectura de
+                                    micro-frontends usando Module
                                     Federation. Design system propio con Storybook. Pipeline de CI/CD con quality gates
                                     automatizados.</p>
                             </div>
 
                             <div class="project__detail">
-                                <h4 class="project__detail-label">Decisiones técnicas</h4>
-                                <p>Nx monorepo para gestionar 12 aplicaciones independientes. Estrategia de estado con
+                                <h4 class="project__detail-label" data-i18n="projects.label_decisions">Decisiones
+                                    técnicas</h4>
+                                <p data-i18n="projects.p1_decisions">Nx monorepo para gestionar 12 aplicaciones
+                                    independientes. Estrategia de estado con
                                     NgRx ComponentStore por dominio. Lazy loading agresivo que redujo el bundle inicial
                                     un 73%.</p>
                             </div>
 
                             <div class="project__detail">
-                                <h4 class="project__detail-label">Impacto</h4>
-                                <p>Build time reducido de 15min a 2min. Test coverage de 0% a 82%. Time-to-market de
+                                <h4 class="project__detail-label" data-i18n="projects.label_impact">Impacto</h4>
+                                <p data-i18n="projects.p1_impact">Build time reducido de 15min a 2min. Test coverage de
+                                    0% a 82%. Time-to-market de
                                     features nuevas reducido en 60%. Onboarding de nuevos devs de 3 semanas a 4 días.
                                 </p>
                             </div>
@@ -476,26 +500,31 @@
 
                         <div class="project__body">
                             <div class="project__detail">
-                                <h4 class="project__detail-label">Problema</h4>
-                                <p>App nativa para iOS y Android con dos equipos separados, inconsistencias de UX y
+                                <h4 class="project__detail-label" data-i18n="projects.label_problem">Problema</h4>
+                                <p data-i18n="projects.p2_problem">App nativa para iOS y Android con dos equipos
+                                    separados, inconsistencias de UX y
                                     ciclos de release de 6 semanas. El negocio necesitaba iteración semanal.</p>
                             </div>
 
                             <div class="project__detail">
-                                <h4 class="project__detail-label">Solución</h4>
-                                <p>Reescritura con Ionic + Capacitor sobre Angular. Un solo codebase para ambas
+                                <h4 class="project__detail-label" data-i18n="projects.label_solution">Solución</h4>
+                                <p data-i18n="projects.p2_solution">Reescritura con Ionic + Capacitor sobre Angular. Un
+                                    solo codebase para ambas
                                     plataformas con plugins nativos custom para biometría y notificaciones push.</p>
                             </div>
 
                             <div class="project__detail">
-                                <h4 class="project__detail-label">Decisiones técnicas</h4>
-                                <p>Offline-first con IndexedDB y sync strategy personalizada. Arquitectura de plugins
+                                <h4 class="project__detail-label" data-i18n="projects.label_decisions">Decisiones
+                                    técnicas</h4>
+                                <p data-i18n="projects.p2_decisions">Offline-first con IndexedDB y sync strategy
+                                    personalizada. Arquitectura de plugins
                                     Capacitor para integraciones nativas. Gesture system custom para UX tipo nativa.</p>
                             </div>
 
                             <div class="project__detail">
-                                <h4 class="project__detail-label">Impacto</h4>
-                                <p>De 2 equipos a 1. Release cycle de 6 semanas a 1 semana. Rating en stores: 4.7★.
+                                <h4 class="project__detail-label" data-i18n="projects.label_impact">Impacto</h4>
+                                <p data-i18n="projects.p2_impact">De 2 equipos a 1. Release cycle de 6 semanas a 1
+                                    semana. Rating en stores: 4.7★.
                                     Performance percibida indistinguible de nativo según user testing.</p>
                             </div>
                         </div>
@@ -523,27 +552,32 @@
 
                         <div class="project__body">
                             <div class="project__detail">
-                                <h4 class="project__detail-label">Problema</h4>
-                                <p>Herramienta de colaboración en tiempo real con 10K+ usuarios concurrentes. Los
+                                <h4 class="project__detail-label" data-i18n="projects.label_problem">Problema</h4>
+                                <p data-i18n="projects.p3_problem">Herramienta de colaboración en tiempo real con 10K+
+                                    usuarios concurrentes. Los
                                     editores existentes no soportaban el modelo de datos del dominio.</p>
                             </div>
 
                             <div class="project__detail">
-                                <h4 class="project__detail-label">Solución</h4>
-                                <p>SPA en React con custom CRDT para resolución de conflictos. WebSocket layer con
+                                <h4 class="project__detail-label" data-i18n="projects.label_solution">Solución</h4>
+                                <p data-i18n="projects.p3_solution">SPA en React con custom CRDT para resolución de
+                                    conflictos. WebSocket layer con
                                     reconnection strategy y optimistic updates. Editor custom con canvas rendering.</p>
                             </div>
 
                             <div class="project__detail">
-                                <h4 class="project__detail-label">Decisiones técnicas</h4>
-                                <p>Zustand para estado local, CRDT sync para estado distribuido. Web Workers para
+                                <h4 class="project__detail-label" data-i18n="projects.label_decisions">Decisiones
+                                    técnicas</h4>
+                                <p data-i18n="projects.p3_decisions">Zustand para estado local, CRDT sync para estado
+                                    distribuido. Web Workers para
                                     operaciones pesadas de merge. Virtual scrolling custom para listas de 100K+ items.
                                 </p>
                             </div>
 
                             <div class="project__detail">
-                                <h4 class="project__detail-label">Impacto</h4>
-                                <p>Latencia de sync &lt;100ms p99. Zero data loss en edge cases de conexión. 10K
+                                <h4 class="project__detail-label" data-i18n="projects.label_impact">Impacto</h4>
+                                <p data-i18n="projects.p3_impact">Latencia de sync &lt;100ms p99. Zero data loss en edge
+                                    cases de conexión. 10K
                                     usuarios concurrentes sin degradación. Adoptado como herramienta principal por 3
                                     enterprise clients.</p>
                             </div>
@@ -572,27 +606,32 @@
 
                         <div class="project__body">
                             <div class="project__detail">
-                                <h4 class="project__detail-label">Problema</h4>
-                                <p>Organización con 8 productos frontend, cada uno con su propio set de componentes.
+                                <h4 class="project__detail-label" data-i18n="projects.label_problem">Problema</h4>
+                                <p data-i18n="projects.p4_problem">Organización con 8 productos frontend, cada uno con
+                                    su propio set de componentes.
                                     Inconsistencia visual, duplicación masiva y costos de mantenimiento insostenibles.
                                 </p>
                             </div>
 
                             <div class="project__detail">
-                                <h4 class="project__detail-label">Solución</h4>
-                                <p>Design system framework-agnostic con Web Components core y wrappers para Angular y
+                                <h4 class="project__detail-label" data-i18n="projects.label_solution">Solución</h4>
+                                <p data-i18n="projects.p4_solution">Design system framework-agnostic con Web Components
+                                    core y wrappers para Angular y
                                     React. Tokens de diseño, documentación interactiva y governance model.</p>
                             </div>
 
                             <div class="project__detail">
-                                <h4 class="project__detail-label">Decisiones técnicas</h4>
-                                <p>Lit para Web Components base. Generación automática de wrappers Angular/React. Design
+                                <h4 class="project__detail-label" data-i18n="projects.label_decisions">Decisiones
+                                    técnicas</h4>
+                                <p data-i18n="projects.p4_decisions">Lit para Web Components base. Generación automática
+                                    de wrappers Angular/React. Design
                                     tokens con Style Dictionary. Chromatic para visual regression testing.</p>
                             </div>
 
                             <div class="project__detail">
-                                <h4 class="project__detail-label">Impacto</h4>
-                                <p>80% reducción en código UI duplicado. Tiempo de desarrollo de features UI reducido un
+                                <h4 class="project__detail-label" data-i18n="projects.label_impact">Impacto</h4>
+                                <p data-i18n="projects.p4_impact">80% reducción en código UI duplicado. Tiempo de
+                                    desarrollo de features UI reducido un
                                     40%. Consistencia visual del 95% medida por Chromatic. Adoptado por los 8 equipos en
                                     3 meses.</p>
                             </div>
@@ -627,17 +666,18 @@
                 <div class="opensource__grid">
                     <div class="opensource__philosophy reveal">
                         <blockquote class="opensource__quote">
-                            <p>"El software que más me ha enseñado no lo escribí yo. Lo leí, lo entendí, y luego
+                            <p data-i18n="oss.quote">"El software que más me ha enseñado no lo escribí yo. Lo leí, lo
+                                entendí, y luego
                                 contribuí a mejorarlo."</p>
                         </blockquote>
 
-                        <p>
+                        <p data-i18n-html="oss.p1">
                             Contribuir a open source no es altruismo — es <strong>ingeniería recíproca</strong>. Cada PR
                             que abro en un proyecto público me obliga a entender código que no escribí, adaptarme a
                             convenciones que no elegí, y comunicar decisiones técnicas a personas que no conozco. No
                             existe mejor entrenamiento para un senior engineer.
                         </p>
-                        <p>
+                        <p data-i18n-html="oss.p2">
                             Mis contribuciones se enfocan en <strong>developer tooling</strong>, <strong>component
                                 libraries</strong> y <strong>documentación técnica</strong>. Creo firmemente que la
                             calidad del ecosistema define la calidad de los productos que construimos sobre él.
@@ -646,38 +686,43 @@
 
                     <div class="opensource__contributions reveal">
                         <h3 class="opensource__subtitle">
-                            <span class="code-comment">// Tipo de contribuciones</span>
+                            <span class="code-comment" data-i18n="oss.contributions_title">// Tipo de
+                                contribuciones</span>
                         </h3>
                         <ul class="opensource__list">
                             <li class="opensource__item">
                                 <span class="opensource__item-icon" aria-hidden="true">⚙️</span>
                                 <div>
-                                    <strong>Bug fixes & performance patches</strong>
-                                    <p>Identificar y resolver issues en librerías que uso en producción. Si encuentro un
+                                    <strong data-i18n="oss.contrib1_title">Bug fixes & performance patches</strong>
+                                    <p data-i18n="oss.contrib1_desc">Identificar y resolver issues en librerías que uso
+                                        en producción. Si encuentro un
                                         bug, lo fixeo upstream.</p>
                                 </div>
                             </li>
                             <li class="opensource__item">
                                 <span class="opensource__item-icon" aria-hidden="true">📖</span>
                                 <div>
-                                    <strong>Documentación y ejemplos</strong>
-                                    <p>La documentación es interfaz de usuario para developers. Mejorarla es una
+                                    <strong data-i18n="oss.contrib2_title">Documentación y ejemplos</strong>
+                                    <p data-i18n="oss.contrib2_desc">La documentación es interfaz de usuario para
+                                        developers. Mejorarla es una
                                         contribución de primer nivel.</p>
                                 </div>
                             </li>
                             <li class="opensource__item">
                                 <span class="opensource__item-icon" aria-hidden="true">🧩</span>
                                 <div>
-                                    <strong>Plugins y extensiones</strong>
-                                    <p>Desarrollo de plugins para herramientas del ecosistema, desde ESLint rules hasta
+                                    <strong data-i18n="oss.contrib3_title">Plugins y extensiones</strong>
+                                    <p data-i18n="oss.contrib3_desc">Desarrollo de plugins para herramientas del
+                                        ecosistema, desde ESLint rules hasta
                                         Vite plugins.</p>
                                 </div>
                             </li>
                             <li class="opensource__item">
                                 <span class="opensource__item-icon" aria-hidden="true">🔍</span>
                                 <div>
-                                    <strong>Code review en PRs públicas</strong>
-                                    <p>Revisar código ajeno es contribuir. Feedback constructivo y técnicamente sólido
+                                    <strong data-i18n="oss.contrib4_title">Code review en PRs públicas</strong>
+                                    <p data-i18n="oss.contrib4_desc">Revisar código ajeno es contribuir. Feedback
+                                        constructivo y técnicamente sólido
                                         ayuda a toda la comunidad.</p>
                                 </div>
                             </li>
@@ -686,13 +731,12 @@
                 </div>
 
                 <div class="opensource__cta reveal">
-                    <a href="https://github.com/nicodevvv" class="btn btn--ghost" target="_blank"
-                        rel="noopener noreferrer">
+                    <a href="https://github.com/pedro" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path
                                 d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                         </svg>
-                        <span class="btn__text">Ver perfil en GitHub</span>
+                        <span class="btn__text" data-i18n="oss.cta">Ver perfil en GitHub</span>
                     </a>
                 </div>
             </div>
@@ -705,7 +749,8 @@
             <div class="section__container">
                 <header class="section__header reveal">
                     <span class="section__index" aria-hidden="true">05</span>
-                    <h2 class="section__title" id="philosophy-title">filosofía<span class="section__title-dot">.</span>
+                    <h2 class="section__title" id="philosophy-title"><span
+                            data-i18n="philosophy.title">filosofía</span><span class="section__title-dot">.</span>
                     </h2>
                     <div class="section__line" aria-hidden="true"></div>
                 </header>
@@ -713,8 +758,9 @@
                 <div class="philosophy__grid">
                     <article class="philosophy__card reveal">
                         <div class="philosophy__card-number" aria-hidden="true">01</div>
-                        <h3 class="philosophy__card-title">La complejidad es deuda</h3>
-                        <p>
+                        <h3 class="philosophy__card-title" data-i18n="philosophy.card1_title">La complejidad es deuda
+                        </h3>
+                        <p data-i18n-html="philosophy.card1_desc">
                             Cada abstracción añadida es un costo de mantenimiento. Mi trabajo es encontrar el nivel
                             mínimo de abstracción que resuelve el problema <em>real</em>, no el teórico. Refactorizar
                             hacia la simplicidad es más difícil que sobre-ingeniar, y mucho más valioso.
@@ -723,8 +769,9 @@
 
                     <article class="philosophy__card reveal">
                         <div class="philosophy__card-number" aria-hidden="true">02</div>
-                        <h3 class="philosophy__card-title">Los frameworks cambian, los fundamentos no</h3>
-                        <p>
+                        <h3 class="philosophy__card-title" data-i18n="philosophy.card2_title">Los frameworks cambian,
+                            los fundamentos no</h3>
+                        <p data-i18n-html="philosophy.card2_desc">
                             Invierto más tiempo entendiendo cómo funciona el browser que memorizando APIs de frameworks.
                             Cuando entiendes el event loop, el rendering pipeline y el modelo de memoria, cualquier
                             framework es una herramienta más — no una identidad.
@@ -733,8 +780,9 @@
 
                     <article class="philosophy__card reveal">
                         <div class="philosophy__card-number" aria-hidden="true">03</div>
-                        <h3 class="philosophy__card-title">Performance es empatía</h3>
-                        <p>
+                        <h3 class="philosophy__card-title" data-i18n="philosophy.card3_title">Performance es empatía
+                        </h3>
+                        <p data-i18n-html="philosophy.card3_desc">
                             Optimizar no es un ejercicio técnico narcisista. Es respetar el tiempo y el dispositivo de
                             cada persona que usa lo que construyo. Ese usuario con conexión 3G en un dispositivo de gama
                             baja merece la misma experiencia que el CTO con su MacBook Pro.
@@ -743,8 +791,9 @@
 
                     <article class="philosophy__card reveal">
                         <div class="philosophy__card-number" aria-hidden="true">04</div>
-                        <h3 class="philosophy__card-title">El código es comunicación</h3>
-                        <p>
+                        <h3 class="philosophy__card-title" data-i18n="philosophy.card4_title">El código es comunicación
+                        </h3>
+                        <p data-i18n-html="philosophy.card4_desc">
                             Escribo código para humanos, no para compiladores. Naming explícito, funciones pequeñas con
                             propósito claro, tests que cuentan historias. Si necesitas un comentario para explicar qué
                             hace tu código, tu código necesita reescribirse.
@@ -753,8 +802,8 @@
 
                     <article class="philosophy__card reveal">
                         <div class="philosophy__card-number" aria-hidden="true">05</div>
-                        <h3 class="philosophy__card-title">Feedback loops cortos</h3>
-                        <p>
+                        <h3 class="philosophy__card-title" data-i18n="philosophy.card5_title">Feedback loops cortos</h3>
+                        <p data-i18n-html="philosophy.card5_desc">
                             Desde hot reload hasta CI en cada push, cada segundo de espera es fricción que mata la
                             calidad. Optimizo obsesivamente los ciclos de feedback del equipo: builds rápidos, tests que
                             corren en segundos, deploys automatizados.
@@ -763,8 +812,9 @@
 
                     <article class="philosophy__card reveal">
                         <div class="philosophy__card-number" aria-hidden="true">06</div>
-                        <h3 class="philosophy__card-title">Mentoría como multiplicador</h3>
-                        <p>
+                        <h3 class="philosophy__card-title" data-i18n="philosophy.card6_title">Mentoría como
+                            multiplicador</h3>
+                        <p data-i18n-html="philosophy.card6_desc">
                             Un senior que no hace crecer a su equipo no es senior — es un IC con más años. Code reviews
                             como teaching moments. Pair programming como herramienta de transferencia de criterio.
                             Documentar decisiones, no solo diseños.
@@ -781,17 +831,18 @@
             <div class="section__container">
                 <header class="section__header reveal">
                     <span class="section__index" aria-hidden="true">06</span>
-                    <h2 class="section__title" id="contact-title">contacto<span class="section__title-dot">.</span></h2>
+                    <h2 class="section__title" id="contact-title"><span data-i18n="contact.title">contacto</span><span
+                            class="section__title-dot">.</span></h2>
                     <div class="section__line" aria-hidden="true"></div>
                 </header>
 
                 <div class="contact__content reveal">
-                    <p class="contact__lead">
+                    <p class="contact__lead" data-i18n-html="contact.lead">
                         ¿Tienes un proyecto que necesita <strong>criterio técnico real</strong>?<br>
                         ¿Tu equipo necesita a alguien que no sólo escriba código, sino que <strong>eleve la
                             barra</strong>?
                     </p>
-                    <p class="contact__sub">
+                    <p class="contact__sub" data-i18n="contact.sub">
                         Hablemos. Sin humo. Sin buzzwords. Solo ingeniería.
                     </p>
 
@@ -803,39 +854,32 @@
                         </div>
                         <div class="contact__terminal-body">
                             <p><span class="code-keyword">$</span> echo $CONTACT</p>
-                            <p class="contact__terminal-output">pedro@email.com</p>
+                            <p class="contact__terminal-output">pnicolasdevv@gmail.com</p>
                             <p><span class="code-keyword">$</span> curl -X POST /hire-pedro --data '{"ready": true}'</p>
                             <p class="contact__terminal-output">✓ Message sent. Let's build something great.</p>
                         </div>
                     </div>
 
                     <div class="contact__actions">
-                        <a href="mailto:pedro@email.com" class="btn btn--primary btn--large">
-                            <span class="btn__text">Enviar mensaje</span>
+                        <a href="mailto:pnicolasdevv@gmail.com" class="btn btn--primary btn--large">
+                            <span class="btn__text" data-i18n="contact.cta">Enviar mensaje</span>
                             <span class="btn__icon" aria-hidden="true">→</span>
                         </a>
                     </div>
 
                     <div class="contact__links">
-                        <a href="https://github.com/pedro" target="_blank" rel="noopener noreferrer"
+                        <a href="https://github.com/nicodevvv" target="_blank" rel="noopener noreferrer"
                             class="contact__link" aria-label="GitHub">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
                                 <path
                                     d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                             </svg>
                         </a>
-                        <a href="https://linkedin.com/in/pedro" target="_blank" rel="noopener noreferrer"
-                            class="contact__link" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/pedro-nicolas-perez/" target="_blank"
+                            rel="noopener noreferrer" class="contact__link" aria-label="LinkedIn">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
                                 <path
                                     d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                            </svg>
-                        </a>
-                        <a href="https://twitter.com/pedro" target="_blank" rel="noopener noreferrer"
-                            class="contact__link" aria-label="Twitter / X">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                             </svg>
                         </a>
                     </div>
@@ -850,7 +894,8 @@
     <footer class="footer" role="contentinfo">
         <div class="footer__container">
             <p class="footer__text">
-                <span class="code-comment">// Diseñado y desarrollado con criterio por Pedro</span>
+                <span class="code-comment" data-i18n="footer.credit">// Diseñado y desarrollado por
+                    Pedro Nicolás Pérez</span>
             </p>
             <p class="footer__meta">
                 <span>Vanilla HTML · CSS · JS</span>
@@ -868,6 +913,7 @@
             type="audio/wav">
     </audio>
 
+    <script src="js/i18n.js" defer></script>
     <script src="js/main.js" defer></script>
 </body>
 

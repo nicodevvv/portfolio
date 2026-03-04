@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   ANTIGRAVITY PORTFOLIO — Main JavaScript
+   PORTFOLIO — Main JavaScript
    Interactions, animations, and easter eggs.
    Zero dependencies. Clean. Performant.
    ═══════════════════════════════════════════════════════════ */
@@ -203,28 +203,45 @@
     const comment = $(".hero__comment");
     if (!comment) return;
 
+    let typeTimer = null;
+    let cursorTimer = null;
+
+    function runTyping(text) {
+      // Cancel any ongoing animation
+      if (typeTimer) clearTimeout(typeTimer);
+      if (cursorTimer) clearTimeout(cursorTimer);
+
+      comment.textContent = "";
+      comment.style.borderRight = "2px solid var(--accent-primary)";
+
+      let charIndex = 0;
+      const typeDelay = 50;
+
+      function type() {
+        if (charIndex < text.length) {
+          comment.textContent += text[charIndex];
+          charIndex++;
+          typeTimer = setTimeout(type, typeDelay + Math.random() * 30);
+        } else {
+          cursorTimer = setTimeout(() => {
+            comment.style.borderRight = "none";
+          }, 1500);
+        }
+      }
+
+      typeTimer = setTimeout(type, 400);
+    }
+
+    // Initial run
     const fullText = comment.textContent;
     comment.textContent = "";
     comment.style.borderRight = "2px solid var(--accent-primary)";
+    setTimeout(() => runTyping(fullText), 800);
 
-    let charIndex = 0;
-    const typeDelay = 50;
-
-    function type() {
-      if (charIndex < fullText.length) {
-        comment.textContent += fullText[charIndex];
-        charIndex++;
-        setTimeout(type, typeDelay + Math.random() * 30);
-      } else {
-        // Remove cursor after typing
-        setTimeout(() => {
-          comment.style.borderRight = "none";
-        }, 1500);
-      }
-    }
-
-    // Start typing after a brief delay
-    setTimeout(type, 800);
+    // Re-trigger on language change
+    document.addEventListener("langChanged", () => {
+      runTyping(comment.textContent);
+    });
   }
 
   // ═══════════════════════════════════════════════════════════
@@ -277,7 +294,7 @@
       `,
     };
 
-    console.log("%c{P} Antigravity Portfolio", styles.header);
+    console.log("%c{P} Portfolio", styles.header);
     console.log("%c", styles.text);
     console.log(
       "%cSi estás aquí, probablemente seas developer. Bienvenido/a.",
@@ -317,7 +334,7 @@
         "%c✅ Excelente decisión. Vamos a construir algo increíble.",
         styles.header,
       );
-      console.log("%c📧 pedro@email.com", styles.accent);
+      console.log("%c📧 pnicolasdevv@gmail.com", styles.accent);
       return "🚀 Let's build.";
     };
 
@@ -389,6 +406,11 @@
   // ═══════════════════════════════════════════════════════════
   function handleLoad() {
     document.body.classList.add("loaded");
+
+    // Initialize i18n first (applies stored language)
+    if (window.__i18n) {
+      window.__i18n.initI18n();
+    }
 
     // Initialize modules
     initRevealAnimations();
